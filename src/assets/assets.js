@@ -12,12 +12,13 @@ import tabletOffer from "./offer/NB-6-DT.webp"
 import monitorsOffer from "./offer/7-DT.webp"
 import samsungOffer from "./offer/CX-ADP-Migration-LNB-8-DT.webp"
 import forBu from "./offer/CX-ADP-Migration-LNB-9-DT.webp"
+import bg2sam from "./bg/CX_ADP_YouMake_HeroBanner_DT_1440x540.webp"
 export const assets = {
     logo: {
         logo,
     },
     bg: {
-        samsungSlid1, samsungSlid2, samsungSlid3
+        samsungSlid1, samsungSlid2, samsungSlid3,bg2sam
     }
 }
 
