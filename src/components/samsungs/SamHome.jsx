@@ -1,22 +1,27 @@
 import { useEffect, useRef, useState } from "react";
-import Slider from "./SamHero"
+import Slider from "./SamHero";
 import { assets, offers, products } from "../../assets/assets";
 import { Link } from "react-router-dom";
-import "/src/style/samsung.css"
+import "/src/style/samsung.css";
 import { useShopContext } from "../../hooks/useShopContext";
 
 const H1 = ({ text }) => {
-  return (<h1 className="text-2xl md:text-4xl font-bold ml-2 md:ml-8 mt-8 mb-8">{text} </h1>)
-}
-
+  return (
+    <h1 className="text-2xl md:text-4xl font-bold ml-2 md:ml-8 mt-8 mb-8">
+      {text}{" "}
+    </h1>
+  );
+};
 
 function SamHome() {
   const scrollRef = useRef(null);
-  const { formatPrice } = useShopContext()
+  const { formatPrice } = useShopContext();
   return (
     <>
       <Slider />
-      <h1 className="text-2xl md:text-4xl m-8 font-bold text-center ">Shop all the latest products and innovations</h1>
+      <h1 className="text-2xl md:text-4xl m-8 font-bold text-center ">
+        Shop all the latest products and innovations
+      </h1>
 
       <div className="w-full px-4">
         {/* Wrapper pour isoler la scrollbar */}
@@ -25,12 +30,16 @@ function SamHome() {
           <div
             ref={scrollRef}
             className="flex gap-6 overflow-x-auto pb-4 scrollbar-thin scrollbar-thumb-gray-500 scrollbar-track-transparent  hide-scrollbar"
-            style={{ scrollBehavior: 'smooth' }}
+            style={{ scrollBehavior: "smooth" }}
           >
             {offers.map((offer, index) => (
               <div key={index} className="flex-shrink-0 w-[200px] text-center">
                 <div className="w-[100px] h-[100px] mx-auto rounded-lg overflow-hidden bg-white cursor-pointer shadow transform transition-transform duration-300 hover:scale-105">
-                  <img src={offer.img} alt={offer.label} className="object-contain w-full h-full" />
+                  <img
+                    src={offer.img}
+                    alt={offer.label}
+                    className="object-contain w-full h-full"
+                  />
                 </div>
                 <p className="mt-2 text-sm font-medium">{offer.label}</p>
               </div>
@@ -47,29 +56,140 @@ function SamHome() {
       <div className="relative w-full h-[32em] mt-4 mb-4 flex items-center justify-center md:justify-start">
         <img src={assets.bg.bg2sam} className="w-full absolute" />
         <div className="relative w-[29.5em] h-96 flex flex-col justify-center items-center gap-1.5 md:ml-24">
-          <h1 className="text-4xl md:text-6xl font-bold text-center mb-2"> #YouMake every day Smarter </h1>
-          <h3 className="font-semibold text-xl md:text-2xl text-center">Choose connection. Enjoy the moment.</h3>
+          <h1 className="text-4xl md:text-6xl font-bold text-center mb-2">
+            {" "}
+            #YouMake every day Smarter{" "}
+          </h1>
+          <h3 className="font-semibold text-xl md:text-2xl text-center">
+            Choose connection. Enjoy the moment.
+          </h3>
           <div className="relative mt-2 flex justify-center gap-2 items-center  w-full">
             <Link to={"/"} className="group flex flex-col gap-0.5 text-black ">
               Learn More
               <div className="bg-black h-0.5 w-0 group-hover:w-full transition-all duration-300" />
             </Link>
-            <button className="w-1/3 h-9 bg-black text-white font-bold rounded-full cursor-pointer">Shop Now</button>
+            <button className="w-1/3 h-9 bg-black text-white font-bold rounded-full cursor-pointer">
+              Shop Now
+            </button>
           </div>
         </div>
       </div>
 
       <H1 text={"Samsung smartphone"} />
-      <ProductScroll label={"phone"} products={products.map((el) => ({ ...el, subtitle: `Save up to ${formatPrice(el.price)} with instant trade-in credit` }))} />
+      <ProductScroll
+        scrollable={true}
+        label={"phone"}
+        products={products
+          .filter(
+            (elem) => elem.category === "phone" && elem.marque === "samsung"
+          )
+          .map((el) => ({
+            ...el,
+            subtitle: `Save up to ${formatPrice(
+              el.price
+            )} with instant trade-in credit`,
+          }))}
+      />
       <H1 text={"TV & Audio Offers"} />
+      <ProductScroll
+        scrollable={true}
+        label={"tv"}
+        products={products
+          .filter(
+            (elem) =>
+              elem.marque === "samsung" &&
+              (elem.category === "tv" || elem.category === "audio")
+          )
+          .map((ele) => {
+            if (ele.category === "tv") {
+              return {
+                ...ele,
+                subtitle: `Save ${formatPrice(
+                  ele.normal - ele.price
+                )}. Now ${formatPrice(ele.price)} or ${formatPrice(
+                  (ele.price / 24).toFixed(2)
+                )} /mo for 24 mos.`,
+              };
+            } else {
+              return {
+                ...ele,
+                subtitle: `Save ${formatPrice(
+                  ele.normal - ele.price
+                )}. Now ${formatPrice(ele.price)}`,
+              };
+            }
+          })}
+      />
 
+      <H1 text={"Appliance Offers"} />
+      <ProductScroll
+        label={"appliance"}
+        scrollable={true}
+        products={products
+          .filter((e) => e.category === "appliance")
+          .map((el) => ({
+            ...el,
+            subtitle: `Save ${formatPrice(
+              (el.normal - el.price).toFixed(2)
+            )}+.Plus more on us. Now ${formatPrice(el.price)}`,
+          }))}
+      />
+      <H1 text={"Wearable & Buds Offers"} />
+      <ProductScroll
+        label={"wearable"}
+        scrollable={true}
+        products={products
+          .filter(
+            (e) =>
+              (e.marque === "samsung" && e.category === "wearable") ||
+              e.category === "buds"
+          )
+          .map((el) => ({
+            ...el,
+            subtitle: `Save up to ${formatPrice(
+              (el.normal - el.price).toFixed(2)
+            )}+. From ${formatPrice(el.price)} before trade-in.°`,
+          }))}
+      />
+      <H1 text={"Tablets & Computing Offers"} />
+      <ProductScroll
+        label={"tablet"}
+        scrollable={false}
+        products={products
+          .filter((el) => el.marque === "samsung" && el.category === "tablet")
+          .map((product) => ({
+            ...product,
+            subtitle: `Save up to ${formatPrice(
+              (product.normal - product.price).toFixed(2)
+            )}. From ${product.price} before trade in.`,
+          }))}
+      />
     </>
-  )
+  );
 }
 
+export function Elem({ id, label, name, subtitle, index, logo }) {
+  return (
+    <Link
+      to={`/collection/samsung/shop/${label}/${id}`}
+      key={index}
+      className="min-w-[20em] max-w-[22em] bg-white p-4 rounded-lg shadow hover:scale-105 transition-transform duration-300"
+      style={{ boxShadow: "0 4px 12px #F5F5F5" }}
+    >
+      <img
+        src={logo}
+        alt={name}
+        className="w-full h-auto mb-2 object-contain"
+      />
+      <h3 className="font-semibold text-lg text-center">{name}</h3>
+      <p className="text-sm md:text-xl text-gray-600 text-center p-2">
+        {subtitle}
+      </p>
+    </Link>
+  );
+}
 
-
-export function ProductScroll({ products, label }) {
+export function ProductScroll({ products, label, scrollable }) {
   const scrollRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
 
@@ -106,26 +226,22 @@ export function ProductScroll({ products, label }) {
       >
         <div className="flex gap-6 py-4 w-max">
           {products.map((product, index) => (
-            <Link to={`/collection/samsung/shop/${label}/${product.id}`}
+            <Elem
               key={index}
-              className="min-w-[20em] max-w-[22em] bg-white p-4 rounded-lg shadow hover:scale-105 transition-transform duration-300"
-              style={{ boxShadow: '0 4px 12px #F5F5F5' }}
-            >
-              <img
-                src={product.logo}
-                alt={product.name}
-                className="w-full h-auto mb-2 object-contain"
-              />
-              <h3 className="font-semibold text-lg text-center">{product.name}</h3>
-              <p className="text-sm md:text-xl text-gray-600 text-center p-2">
-                {product.subtitle}
-              </p>
-            </Link>
+              index={index}
+              label={label}
+              id={product.id}
+              name={product.name}
+              logo={product.logo}
+              subtitle={product.subtitle}
+            />
           ))}
         </div>
       </div>
 
-      <div className="flex justify-center w-full ">
+      <div
+        className={`${scrollable ? "flex justify-center w-full" : "hidden"}`}
+      >
         <div className="flex w-1/2 items-center gap-2 px-6 mt-[-0.5em]">
           <div className="relative flex-1 h-1 bg-gray-200 rounded overflow-hidden">
             <div
@@ -138,12 +254,27 @@ export function ProductScroll({ products, label }) {
               onClick={() => scroll("left")}
               className="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full shadow hover:bg-gray-200 cursor-pointer border-2 border-gray-200 hover:border-dashed"
             >
-              <svg xmlns="http://www.w3.org/2000/svg" height={24} width={24} viewBox="0 0 448 512">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                height={24}
+                width={24}
+                viewBox="0 0 448 512"
+              >
                 <path d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z" />
               </svg>
             </button>
-            <button onClick={() => scroll("right")} className="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full shadow hover:bg-gray-200 cursor-pointer border-2 border-gray-200 hover:border-dashed">
-              <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} viewBox="0 0 448 512"><path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" /></svg>
+            <button
+              onClick={() => scroll("right")}
+              className="w-12 h-12 flex items-center justify-center bg-gray-100 rounded-full shadow hover:bg-gray-200 cursor-pointer border-2 border-gray-200 hover:border-dashed"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width={24}
+                height={24}
+                viewBox="0 0 448 512"
+              >
+                <path d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z" />
+              </svg>
             </button>
           </div>
         </div>
@@ -152,9 +283,4 @@ export function ProductScroll({ products, label }) {
   );
 }
 
-
-
-
-export default SamHome
-
-
+export default SamHome;
