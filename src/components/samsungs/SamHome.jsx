@@ -171,7 +171,7 @@ function SamHome() {
 export function Elem({ id, label, name, subtitle, index, logo }) {
   return (
     <Link
-      to={`/collection/samsung/shop/${label}/${id}`}
+      to={`/collection/samsung/${label}/${id}`}
       key={index}
       className="min-w-[20em] max-w-[22em] bg-white p-4 rounded-lg shadow hover:scale-105 transition-transform duration-300"
       style={{ boxShadow: "0 4px 12px #F5F5F5" }}

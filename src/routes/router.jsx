@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Collection from "../pages/Collection";
 import { tecnoRoutes } from "./tecno/tecno.routes";
 import { samsungRoutes } from "./samsung/samsung.routes";
+import { appleRoutes } from "./apple/apple.routes";
 
 export const router = createBrowserRouter([
     {
@@ -14,7 +15,7 @@ export const router = createBrowserRouter([
         path: "/collection",
         element: <Collection />,
         children: [
-            ...tecnoRoutes, ...samsungRoutes
+            ...tecnoRoutes, ...samsungRoutes,...appleRoutes
         ]
     },
     {
