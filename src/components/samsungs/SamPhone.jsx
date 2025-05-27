@@ -1,53 +1,50 @@
 import { useParams } from "react-router-dom"
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import { useShopContext } from "../../hooks/useShopContext";
 import { ImageSlider } from "./X022";
 import Title from "./°";
-const images = [
-    'https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide1.png',
-    'https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide2.png',
-    'https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide3.png',
-    'https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide4.png',
-    'https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide5.png',
-];
+import { products } from "../../assets/assets";
+
 function SamPhone() {
   const { formatPrice } = useShopContext()
   const { id } = useParams()
-  console.log(id);
-  
   const [selectedStorageIndex, setSelectedStorageIndex] = useState(0);
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
-
-  const storages = [
-    {
-      size: '256Go',
-      normal: 1299.99,
-      price: 1199.99,
-      colors: [
-        { col: "#000000", name: "Black", price: 1112.99 },
-        { col: "#ffffff", name: "White", price: 799.99 },
-      ]
-    },
-    {
-      size: '512Go',
-      normal: 1499.99,
-      price: 1399.99,
-      colors: [
-        { col: "#333333", name: "Graphite", price: 1299.99 },
-        { col: "#dddddd", name: "Silver", price: 1199.99 },
-      ]
-    },
-  ];
+  const [storages, setStorage] = useState([])
+  const [images, setImages] = useState([])
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
   const selectedStorage = storages[selectedStorageIndex];
-  const selectedColor = selectedStorage.colors[selectedColorIndex];
-  const totalPrice = selectedColor?.price || selectedStorage.price;
-  const savings = selectedStorage.normal ? selectedStorage.normal - totalPrice : 0;
+  const selectedColor = selectedStorage?.colors?.[selectedColorIndex] || {};
+  const totalPrice = selectedColor?.price || selectedStorage?.price || 0;
+  const savings = selectedStorage?.normal ? selectedStorage.normal - totalPrice : 0;
+
+  const fetchPhone = async () => {
+    try {
+      setLoading(true);
+      const product = products.find(el => el.id === id);
+      if (!product) throw new Error("Product not found");
+      setStorage(product.storages);
+      setImages(product.images);
+    } catch (err) {
+      setError(err.message);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  useEffect(() => {
+    fetchPhone();
+  }, []);
+
+  if (loading) return <div className="p-8 text-center">Loading...</div>;
+  if (error) return <div className="p-8 text-center text-red-500">Error: {error}</div>;
 
   return (
     <>
-      <Title total={totalPrice} savings={savings} />
+      <Title total={totalPrice} savings={savings} color={selectedColor.name} />
       <div className="flex relative pl-2 w-full h-[32em] gap-3 md:justify-between">
         <ImageSlider images={images} />
         <div className="hide-scrollbar overflow-auto relative w-full md:w-1/3 min-h-96 max-h-[32em] top-9">
@@ -80,7 +77,7 @@ function SamPhone() {
           <div className="w-full px-4 mt-6">
             <h1 className="text-xl md:text-2xl font-bold mb-2">Color</h1>
             <div className="flex gap-4">
-              {selectedStorage.colors.map((color, i) => (
+              {selectedStorage?.colors?.map((color, i) => (
                 <div
                   key={i}
                   onClick={() => setSelectedColorIndex(i)}
@@ -95,6 +92,5 @@ function SamPhone() {
     </>
   )
 }
-
 
 export default SamPhone;

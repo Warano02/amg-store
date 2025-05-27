@@ -51,7 +51,7 @@ export const assets = {
         logo,
     },
     bg: {
-        samsungSlid1, samsungSlid2, samsungSlid3,bg2sam
+        samsungSlid1, samsungSlid2, samsungSlid3, bg2sam
     }
 }
 
@@ -98,7 +98,7 @@ export const offers = [
 
 export const products = [
     {
-        id:"dd14dd52",
+        id: "dd14dd52",
         name: "Galaxy S25 Ultra",
         marque: "samsung",
         category: "phone",
@@ -108,12 +108,36 @@ export const products = [
         normal: 1299.99,
         inStock: true,
         isNew: true,
+        storages: [
+            {
+                size: '256Go',
+                normal: 1299.99,
+                price: 1199.99,
+                colors: [
+                    { col: "#000000", name: "Black", price: 1112.99 },
+                    { col: "#ffffff", name: "White", price: 799.99 },
+                ]
+            },
+            {
+                size: '512Go',
+                normal: 1499.99,
+                price: 1399.99,
+                colors: [
+                    { col: "#333333", name: "Graphite", price: 1299.99 },
+                    { col: "#dddddd", name: "Silver", price: 1199.99 },
+                ]
+            },
+        ],
         images: [
-            samsungS23Ultra,
+            samsungS23Ultra, 'https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide1.png',
+            'https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide2.png',
+            'https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide3.png',
+            'https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide4.png',
+            'https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide5.png',
         ]
     },
     {
-        id:"s115s",
+        id: "s115s",
         name: "Galaxy S25",
         marque: "samsung",
         category: "phone",
@@ -128,7 +152,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d53",
+        id: "dd14d53",
         name: "Galaxy S25",
         marque: "samsung",
         category: "phone",
@@ -143,7 +167,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d54",
+        id: "dd14d54",
         name: "Galaxy Z Fold6",
         marque: "samsung",
         category: "phone",
@@ -158,7 +182,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d55",
+        id: "dd14d55",
         name: "Galaxy Flip6",
         marque: "samsung",
         category: "phone",
@@ -173,7 +197,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d56",
+        id: "dd14d56",
         name: "Galaxy S224",
         marque: "samsung",
         category: "phone",
@@ -188,7 +212,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d57",
+        id: "dd14d57",
         name: '77" Neo Class QLED N990F 8K TV',
         marque: "samsung",
         category: "tv",
@@ -203,7 +227,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d58",
+        id: "dd14d58",
         name: '77" Neo QLED N90F 8K TV',
         marque: "samsung",
         category: "tv",
@@ -218,7 +242,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d59",
+        id: "dd14d59",
         name: '77" Neo class OLED S95F TV',
         marque: "samsung",
         category: "tv",
@@ -233,7 +257,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d60",
+        id: "dd14d60",
         name: '77" Class The Frame Pro LSO3FW Neo QLED 4K Tv',
         marque: "samsung",
         category: "tv",
@@ -248,7 +272,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d61",
+        id: "dd14d61",
         name: '65" Class the Frame LSO3FA QLED 4K TV',
         marque: "samsung",
         category: "tv",
@@ -263,7 +287,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d62",
+        id: "dd14d62",
         name: 'Q-series SoundBar HW-Q99OF 11.1.4 ch Subwoofer',
         marque: "samsung",
         category: "audio",
@@ -278,7 +302,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d63",
+        id: "dd14d63",
         name: 'Q-series SoundBar HW-Q90OF 7.1.4 ch Subwoofer',
         marque: "samsung",
         category: "audio",
@@ -293,7 +317,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d64",
+        id: "dd14d64",
         name: 'Q-series SoundBar HW-Q90OF 7.1.4 ch Subwoofer',
         marque: "samsung",
         category: "audio",
@@ -308,7 +332,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d65",
+        id: "dd14d65",
         name: 'Bespoke Refrigerator With Ai Family Hub™️+',
         marque: "samsung",
         category: "appliance",
@@ -323,7 +347,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d66",
+        id: "dd14d66",
         name: 'Bespoke Refrigerator with Ai Home',
         marque: "samsung",
         category: "appliance",
@@ -338,7 +362,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d67",
+        id: "dd14d67",
         name: 'Bespoke Refrigerator with inner Beverage Center™️',
         marque: "samsung",
         category: "appliance",
@@ -353,7 +377,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d68",
+        id: "dd14d68",
         name: 'Bespoke Refrigerator with inner Beverage Center™️',
         marque: "samsung",
         category: "appliance",
@@ -368,7 +392,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d69",
+        id: "dd14d69",
         name: 'Bespoke Dishwasher with 3rd Rack Washing System',
         marque: "samsung",
         category: "appliance",
@@ -383,7 +407,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d70",
+        id: "dd14d70",
         name: 'Bespoke Ai Jet™️ Ultra Cordless Stick Vacuum',
         marque: "samsung",
         category: "appliance",
@@ -398,7 +422,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d71",
+        id: "dd14d71",
         name: 'Bespoke Ai Laundry Combo™️ All-in-one',
         marque: "samsung",
         category: "appliance",
@@ -413,7 +437,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d72",
+        id: "dd14d72",
         name: 'Galaxy Watch Ultra',
         marque: "samsung",
         category: "wearable",
@@ -428,7 +452,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d73",
+        id: "dd14d73",
         name: 'Galaxy Watch7',
         marque: "samsung",
         category: "wearable",
@@ -443,7 +467,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d74",
+        id: "dd14d74",
         name: 'Galaxy Buds3 Pro',
         marque: "samsung",
         category: "buds",
@@ -458,7 +482,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d75",
+        id: "dd14d75",
         name: 'Galaxy Ring',
         marque: "samsung",
         category: "buds",
@@ -473,7 +497,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d76",
+        id: "dd14d76",
         name: 'Galaxy Buds3',
         marque: "samsung",
         category: "buds",
@@ -488,7 +512,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d77",
+        id: "dd14d77",
         name: 'Galaxy Tab S10 FE+ | FE',
         marque: "samsung",
         category: "tablet",
@@ -503,7 +527,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d78",
+        id: "dd14d78",
         name: 'Galaxy Tab S10 Ultra',
         marque: "samsung",
         category: "tablet",
@@ -518,7 +542,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d79",
+        id: "dd14d79",
         name: 'Galaxy Book 5 Pro',
         marque: "samsung",
         category: "tablet",
@@ -533,7 +557,7 @@ export const products = [
         ]
     },
     {
-        id:"dd14d80",
+        id: "dd14d80",
         name: 'Galaxy Book5 Pro 360',
         marque: "samsung",
         category: "tablet",
