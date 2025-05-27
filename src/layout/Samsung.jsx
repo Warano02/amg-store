@@ -2,7 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "../components/samsungs/Navbar";
 import SamHome from "../components/samsungs/SamHome";
 import SamFooter from "../components/samsungs/SamFooter";
-
+import "../style/samsung.css"
 function Samsung() {
   const location = useLocation();
   const isHome = location.pathname === "/collection/samsung";
@@ -10,7 +10,9 @@ function Samsung() {
     <>
       <Navbar />
       {isHome && <SamHome />}
-       <Outlet />
+     <div className="mt-21">
+        <Outlet  />
+     </div>
       <SamFooter />
     </>
   );
