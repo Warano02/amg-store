@@ -69,7 +69,7 @@ function SamHome() {
 
 
 
-export function ProductScroll({ products, label }) {
+export function ProductScroll({ products, label }) { 
   const scrollRef = useRef(null);
   const [scrollProgress, setScrollProgress] = useState(0);
 
