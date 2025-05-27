@@ -1,13 +1,18 @@
+import SamPhone from "../../components/samsungs/SamPhone";
+import SamProduct from "../../components/samsungs/SamProduct";
 import Samsung from "../../layout/Samsung";
-import ProductList from "../../pages/tecno/ProductList";
 
 export const samsungRoutes =[ {
     path: "samsung",
     element: <Samsung />,
     children: [
         {
-            path: "product-list",
-            element: <ProductList />,
-        }
+            path: "phone/:id",
+            element: <SamPhone />,
+        },
+        {
+            path: "product",
+            element: <SamProduct />,
+        },
     ],
 }];
