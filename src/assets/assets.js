@@ -19,12 +19,25 @@ import s25p3 from "./phone/s25p3.webp"
 import s25p4 from "./phone/s25p4.webp"
 import s25p5 from "./phone/s25p5.webp"
 import s25p6 from "./phone/s25p6.webp"
-
-
 import samsungS25 from "./phone/galaxyS25.webp"
+import s25s1 from "./phone/s25s1.webp"
+import s25s2 from "./phone/s25s2webp.webp"
 import samsungFontZ6 from "./phone/samsungFondZ.avif"
+import sf1 from "./phone/sf1.jpg"
+import sf2 from "./phone/sf2.webp"
+import sf3 from "./phone/sf3.webp"
+import sf4 from "./phone/sf6.webp"
 import samsungFoldZ6Flip from "./phone/galaxyFond6Zflip.webp"
+import sff1 from "./phone/sff1.webp"
+import sff2 from "./phone/sff2.webp"
+import sff3 from "./phone/sff3.webp"
 import samsungS24Re from "./phone/galaxy24re.webp"
+import s24s1 from "./phone/s24s1.webp"
+import s24s2 from "./phone/s24s2.webp"
+import s24s3 from "./phone/s24s3.webp"
+import s24s4 from "./phone/s24s4.webp"
+import s24s5 from "./phone/s24s5.webp"
+
 import samsungNeoTv1 from "./tv/class7.webp"
 import sansungNeoTv2 from "./tv/neo90.webp"
 import samsungOledTv1 from "./tv/oledTv1.webp"
@@ -213,7 +226,7 @@ export const products = [
             }
         ],
         images: [
-            samsungS25,
+            samsungS25,s25p2, s25p3,s25s2,s25s1, s25p4, s25p5, s25p6
         ]
     },
     {
@@ -247,7 +260,7 @@ export const products = [
             }
         ],
         images: [
-            samsungFontZ6,
+            samsungFontZ6,sf1, sf2, sf3, sf4
         ]
     },
     {
@@ -281,7 +294,7 @@ export const products = [
             }
         ],
         images: [
-            samsungFoldZ6Flip,
+            samsungFoldZ6Flip,sff1, sff2, sff3
         ]
     },
     {
@@ -316,7 +329,7 @@ export const products = [
             }
         ],
         images: [
-            samsungS24Re,
+            samsungS24Re,s24s2, s24s1, s24s3, s24s4, s24s5
         ]
     },
     {
