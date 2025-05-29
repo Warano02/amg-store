@@ -14,6 +14,13 @@ import s25u_5 from "./phone/s25u_2.webp"
 import s25u_6 from "./phone/s25u_5.webp"
 import s25u_7 from "./phone/s25u_6.webp"
 import samsungS23Plus from "./phone/galaxys25plus.webp"
+import s25p2 from "./phone/s25p2.webp"
+import s25p3 from "./phone/s25p3.webp"
+import s25p4 from "./phone/s25p4.webp"
+import s25p5 from "./phone/s25p5.webp"
+import s25p6 from "./phone/s25p6.webp"
+
+
 import samsungS25 from "./phone/galaxyS25.webp"
 import samsungFontZ6 from "./phone/samsungFondZ.avif"
 import samsungFoldZ6Flip from "./phone/galaxyFond6Zflip.webp"
@@ -136,11 +143,11 @@ export const products = [
             },
         ],
         images: [
-            samsungS23Ultra,s25u_1,s25u_2,s25u_3,s25u_4,s25u_5,s25u_6,s25u_7]
+            samsungS23Ultra, s25u_1, s25u_2, s25u_3, s25u_4, s25u_5, s25u_6, s25u_7]
     },
     {
         id: "s115s",
-        name: "Galaxy S25",
+        name: "Galaxy S25+",
         marque: "samsung",
         category: "phone",
         desc: "",
@@ -149,8 +156,29 @@ export const products = [
         normal: 1299.99,
         inStock: true,
         isNew: true,
+        storages: [
+            {
+                size: '256Go',
+                normal: 1199.99,
+                price: 999.99,
+                colors: [
+                    { col: "#3C5B8A", name: "blue", price: 999.99 },
+                    { col: "#D3E8DD", name: "White", price: 799.99 },
+                ]
+            },
+            {
+                size: '512Go',
+                normal: 1499.99,
+                price: 1399.99,
+                colors: [
+                    { col: "#333333", name: "Graphite", price: 1299.99 },
+                    { col: "#dddddd", name: "Silver", price: 1199.99 },
+                    { col: "", name: "Silver", price: 1199.99 },
+                ]
+            },
+        ],
         images: [
-            samsungS23Plus,
+            samsungS23Plus, s25p2, s25p3, s25p4, s25p5, s25p6
         ]
     },
     {
@@ -158,12 +186,32 @@ export const products = [
         name: "Galaxy S25",
         marque: "samsung",
         category: "phone",
-        desc: "",
+        desc: "Experience the next-level performance and design with the Galaxy S25. Lightweight, powerful, and made for the modern user.",
         logo: samsungS25,
-        price: 630,
-        normal: 1299.99,
+        price: 499.99,
+        normal: 999.99,
         inStock: true,
         isNew: true,
+        storages: [
+            {
+                size: '128Go',
+                normal: 999.99,
+                price: 899.99,
+                colors: [
+                    { col: "#1E1E1E", name: "Phantom Black", price: 899.99 },
+                    { col: "#FAFAFA", name: "Cream White", price: 849.99 },
+                ]
+            },
+            {
+                size: '256Go',
+                normal: 1099.99,
+                price: 999.99,
+                colors: [
+                    { col: "#4267B2", name: "Blue", price: 999.99 },
+                    { col: "#C0C0C0", name: "Silver", price: 959.99 },
+                ]
+            }
+        ],
         images: [
             samsungS25,
         ]
@@ -173,12 +221,31 @@ export const products = [
         name: "Galaxy Z Fold6",
         marque: "samsung",
         category: "phone",
-        desc: "",
+        desc: "Unfold your potential with the Galaxy Z Fold6. A seamless tablet and phone hybrid for productivity on the go.",
         logo: samsungFontZ6,
-        price: 630,
-        normal: 1299.99,
+        price: 1699.99,
+        normal: 1999.99,
         inStock: true,
         isNew: true,
+        storages: [
+            {
+                size: '512Go',
+                normal: 1999.99,
+                price: 1799.99,
+                colors: [
+                    { col: "#000000", name: "Phantom Black", price: 1799.99 },
+                    { col: "#EEE0DE", name: "Beige", price: 1699.99 },
+                ]
+            },
+            {
+                size: '1To',
+                normal: 2199.99,
+                price: 1999.99,
+                colors: [
+                    { col: "#999999", name: "Gray", price: 1999.99 },
+                ]
+            }
+        ],
         images: [
             samsungFontZ6,
         ]
@@ -188,12 +255,31 @@ export const products = [
         name: "Galaxy Flip6",
         marque: "samsung",
         category: "phone",
-        desc: "",
+        desc: "The Galaxy Flip6 combines fashion with function in a compact, foldable design. Pocket-size perfection.",
         logo: samsungFoldZ6Flip,
-        price: 630,
-        normal: 1299.99,
+        price: 1199.99,
+        normal: 1499.99,
         inStock: true,
         isNew: true,
+        storages: [
+            {
+                size: '256Go',
+                normal: 1399.99,
+                price: 1199.99,
+                colors: [
+                    { col: "#FF69B4", name: "Pink", price: 1199.99 },
+                    { col: "#000000", name: "Black", price: 1149.99 },
+                ]
+            },
+            {
+                size: '512Go',
+                normal: 1499.99,
+                price: 1299.99,
+                colors: [
+                    { col: "#8A2BE2", name: "Violet", price: 1299.99 },
+                ]
+            }
+        ],
         images: [
             samsungFoldZ6Flip,
         ]
@@ -203,12 +289,32 @@ export const products = [
         name: "Galaxy S224",
         marque: "samsung",
         category: "phone",
-        desc: "",
+        desc: "A balance of performance and style, the Galaxy S224 is the go-to choice for everyday premium smartphone users.",
         logo: samsungS24Re,
-        price: 630,
-        normal: 1299.99,
+        price: 749.99,
+        normal: 1099.99,
         inStock: true,
         isNew: true,
+        storages: [
+            {
+                size: '256Go',
+                normal: 1099.99,
+                price: 999.99,
+                colors: [
+                    { col: "#2F4F4F", name: "Dark Slate", price: 999.99 },
+                    { col: "#D3D3D3", name: "Light Gray", price: 949.99 },
+                ]
+            },
+            {
+                size: '512Go',
+                normal: 1299.99,
+                price: 1199.99,
+                colors: [
+                    { col: "#FFD700", name: "Gold", price: 1199.99 },
+                    { col: "#1C1C1C", name: "Carbon Black", price: 1149.99 },
+                ]
+            }
+        ],
         images: [
             samsungS24Re,
         ]

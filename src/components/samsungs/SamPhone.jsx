@@ -12,6 +12,7 @@ function SamPhone() {
   const [selectedStorageIndex, setSelectedStorageIndex] = useState(0);
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
   const [storages, setStorage] = useState([])
+  const [phoneName,setPhoneName]=useState("")
   const [images, setImages] = useState([])
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -26,6 +27,7 @@ function SamPhone() {
       setLoading(true);
       const product = products.find(el => el.id === id);
       if (!product) throw new Error("Product not found");
+      setPhoneName(product.name)
       setStorage(product.storages);
       setImages(product.images);
     } catch (err) {
@@ -44,7 +46,7 @@ function SamPhone() {
 
   return (
     <>
-      <Title total={totalPrice} savings={savings} color={selectedColor.name} />
+      <Title storage={selectedStorage.size} total={totalPrice} savings={savings} color={selectedColor.name} name={phoneName} />
       <div className="flex relative pl-2 w-full h-[32em] gap-3 md:justify-between">
         <ImageSlider images={images} />
         <div className="hide-scrollbar overflow-auto relative w-full md:w-1/3 min-h-96 max-h-[32em] top-9">
