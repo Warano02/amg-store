@@ -1,5 +1,14 @@
 import logo from "./logo/logo.jpg"
-
+//bg
+import s200s1 from "./bg/store-card-40-macbook-air-202503.jpg"
+import sld45 from "./bg/store-card-40-iphone-16-pro-202409_GEO_US.jpg"
+import iap from "./bg/store-card-40-ipad-air-202503.jpg"
+import iPride from "./bg/store-card-40-watch-pride-202505.png"
+import wat from "./bg/store-card-40-watch-s10-202409.jpg"
+import ip1 from "./bg/store-card-40-iphone-16e-202502_GEO_US.jpg"
+import ipa2 from "./bg/store-card-40-ipad-202503.jpg"
+import i16  from "./bg/store-card-40-iphone-16-202409_GEO_US.jpg"
+import wat2 from "./bg/store-card-40-watch-ultra-202409_GEO_US.jpg"
 //phone
 import samsungSlid1 from "./bg/HOME_GalaxyS25Edge_Main-KV_1440x640_pc.webp"
 import samsungSlid2 from "./bg/SDSAC-9302-DA-Lockup-Memorial-Day-Stars-HP_KV_Full_Bleed_DT-1440x640.webp"
@@ -78,7 +87,7 @@ export const assets = {
         logo,
     },
     bg: {
-        samsungSlid1, samsungSlid2, samsungSlid3, bg2sam
+        samsungSlid1,wat2,i16,sld45,ip1,ipa2, iPride,samsungSlid2, samsungSlid3, bg2sam,s200s1,iap,wat
     }
 }
 
