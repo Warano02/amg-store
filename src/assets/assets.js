@@ -6,6 +6,13 @@ import samsungSlid2 from "./bg/SDSAC-9302-DA-Lockup-Memorial-Day-Stars-HP_KV_Ful
 import samsungSlid3 from "./bg/OLED_HP_DT_1440x640.webp"
 // import samsungGalaxyS25Ed from "./phone/samsungGalaxyS25Ed.webp"
 import samsungS23Ultra from "./phone/galaxys25ultra.webp"
+import s25u_1 from "./phone/galaxy-s25-ultra-3.webp"
+import s25u_2 from "./phone/s25_1.webp"
+import s25u_3 from "./phone/s25u-3.webp"
+import s25u_4 from "./phone/s25u3.webp"
+import s25u_5 from "./phone/s25u_2.webp"
+import s25u_6 from "./phone/s25u_5.webp"
+import s25u_7 from "./phone/s25u_6.webp"
 import samsungS23Plus from "./phone/galaxys25plus.webp"
 import samsungS25 from "./phone/galaxyS25.webp"
 import samsungFontZ6 from "./phone/samsungFondZ.avif"
@@ -129,12 +136,7 @@ export const products = [
             },
         ],
         images: [
-            samsungS23Ultra, 'https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide1.png',
-            'https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide2.png',
-            'https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide3.png',
-            'https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide4.png',
-            'https://raw.githubusercontent.com/prebuiltui/prebuiltui/main/assets/gallery/slide5.png',
-        ]
+            samsungS23Ultra,s25u_1,s25u_2,s25u_3,s25u_4,s25u_5,s25u_6,s25u_7]
     },
     {
         id: "s115s",
