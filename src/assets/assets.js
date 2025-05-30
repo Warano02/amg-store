@@ -359,36 +359,18 @@ export const products = [
         name: '77" Neo Class QLED N990F 8K TV',
         marque: "samsung",
         category: "tv",
-        desc: "",
+        desc: "Experience groundbreaking 8K AI performance, immersive visuals, and wireless connectivity in one sleek Neo QLED TV.",
         logo: samsungNeoTv1,
         price: 630,
         normal: 1299.99,
         inStock: true,
         isNew: true,
-        images: [
-            samsungNeoTv1,neo8k1,neo8k2,neo8k3,neo8k4
-        ],
+        images: [samsungNeoTv1, neo8k1, neo8k2, neo8k3, neo8k4],
         sizes: [
-            {
-                size: '65"',
-                price: 5299.99,
-                normal: 5499.99
-            },
-            {
-                size: '75"',
-                price: 6199.99,
-                normal: 6499.99
-            },
-            {
-                size: '85"',
-                price: 7999.99,
-                normal: 8499.99
-            },
-            {
-                size: '98"',
-                price: 42999.99,
-                normal: null
-            },
+            { size: '65"', price: 5299.99, normal: 5499.99 },
+            { size: '75"', price: 6199.99, normal: 6499.99 },
+            { size: '85"', price: 7999.99, normal: 8499.99 },
+            { size: '98"', price: 42999.99, normal: null },
         ]
     },
     {
@@ -396,14 +378,17 @@ export const products = [
         name: '77" Neo QLED N90F 8K TV',
         marque: "samsung",
         category: "tv",
-        desc: "",
+        desc: "Advanced AI upscaling and stunning 8K resolution packed in a premium QLED display for high-end entertainment.",
         logo: sansungNeoTv2,
         price: 6199.99,
         normal: 6499.99,
         inStock: true,
         isNew: true,
-        images: [
-            sansungNeoTv2,
+        images: [sansungNeoTv2],
+        sizes: [
+            { size: '65"', price: 4999.99, normal: 5199.99 },
+            { size: '75"', price: 6199.99, normal: 6499.99 },
+            { size: '85"', price: 7499.99, normal: 7999.99 }
         ]
     },
     {
@@ -411,14 +396,17 @@ export const products = [
         name: '77" Neo class OLED S95F TV',
         marque: "samsung",
         category: "tv",
-        desc: "",
+        desc: "OLED technology meets Neo Class design, delivering perfect blacks, vivid colors, and ultra-slim elegance.",
         logo: samsungOledTv1,
         price: 2699.99,
         normal: 2999.99,
         inStock: true,
         isNew: true,
-        images: [
-            samsungOledTv1,
+        images: [samsungOledTv1],
+        sizes: [
+            { size: '55"', price: 1999.99, normal: 2199.99 },
+            { size: '65"', price: 2499.99, normal: 2699.99 },
+            { size: '77"', price: 2699.99, normal: 2999.99 }
         ]
     },
     {
@@ -426,14 +414,17 @@ export const products = [
         name: '77" Class The Frame Pro LSO3FW Neo QLED 4K Tv',
         marque: "samsung",
         category: "tv",
-        desc: "",
+        desc: "Blends artistic elegance with smart 4K technology, transforming your TV into a gallery-worthy centerpiece.",
         logo: samsungOledTv2,
         price: 2999.99,
         normal: 3299.99,
         inStock: true,
         isNew: true,
-        images: [
-            samsungOledTv2,
+        images: [samsungOledTv2],
+        sizes: [
+            { size: '55"', price: 1799.99, normal: 1999.99 },
+            { size: '65"', price: 2499.99, normal: 2799.99 },
+            { size: '77"', price: 2999.99, normal: 3299.99 }
         ]
     },
     {
@@ -441,14 +432,18 @@ export const products = [
         name: '65" Class the Frame LSO3FA QLED 4K TV',
         marque: "samsung",
         category: "tv",
-        desc: "",
+        desc: "Showcase art or enjoy brilliant QLED visuals with this stylish 4K Frame TV, perfect for design-conscious homes.",
         logo: samsungTvh,
         price: 1699.99,
         normal: 1799.99,
         inStock: true,
         isNew: true,
-        images: [
-            samsungTvh,
+        images: [samsungTvh],
+        sizes: [
+            { size: '43"', price: 999.99, normal: 1099.99 },
+            { size: '55"', price: 1399.99, normal: 1499.99 },
+            { size: '65"', price: 1699.99, normal: 1799.99 },
+            { size: '75"', price: 1999.99, normal: 2199.99 }
         ]
     },
     {
