@@ -2,6 +2,7 @@ import SamBu from "../../components/samsungs/SamBu";
 import SamPhone from "../../components/samsungs/SamPhone";
 import SamProduct from "../../components/samsungs/SamProduct";
 import SamTab from "../../components/samsungs/SamTab";
+import SamTv from "../../components/samsungs/SamTv";
 import Samsung from "../../layout/Samsung";
 
 export const samsungRoutes =[ {
@@ -17,8 +18,16 @@ export const samsungRoutes =[ {
             element: <SamBu />,
         },
         {
+            path: "audio/:id",
+            element: <SamBu />,
+        },
+        {
             path: "tablet/:id",
             element: <SamTab />,
+        },
+        {
+            path: "tv/:id",
+            element: <SamTv />,
         },
         {
             path: "product",

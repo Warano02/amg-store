@@ -36,7 +36,7 @@ export default function Title({ total, savings, name, storage, color }) {
   )
 }
 
-export function TitleTablet({ total, savings, name, storage, color ,size}) {
+export function TitleTablet({ total, savings, name, storage, color, size }) {
   const { formatPrice } = useShopContext()
   return (
     <div className="sticky top-0 z-50 w-full h-[8em] bg-white flex border-b-0.2 border-gray-500 items-center justify-between md:p-2.5">
@@ -62,3 +62,41 @@ export function TitleTablet({ total, savings, name, storage, color ,size}) {
   )
 }
 
+// For TV
+export function Title3({ total, savings, name }) {
+  const { formatPrice } = useShopContext()
+  return (
+    <div className="sticky top-0 z-50 w-full h-[8em] bg-white flex border-b-0.2 border-gray-500 items-center justify-between md:p-2.5">
+      <div className="w-1/2">
+        <h1 className="text-2xl font-bold mb-2">{name}</h1>
+        <div className="flex items-center ">
+          <h3 className="font-semibold text-gray-800">SM-S93U1 /SM938UAKFXAA |</h3>
+          <SVG />
+          <span className="text-blue-500 cursor-pointer hover:underline">4.8 (7803)</span>
+        </div>
+      </div>
+      <div className="flex justify-around gap-14 items-center h-full relative">
+        <div className="flex flex-col gap-2 border-r-1 pr-2">
+          <span className="text-[1em] text-gray-500">Total</span>
+          <span className="text-2xl font-bold">{formatPrice(total.toFixed(2))}</span>
+          <div className="flex gap-2">
+            {savings > 0 && <span className="text-orange-500">Save {formatPrice(savings.toFixed(2))}</span>}
+          </div>
+        </div>
+        <div className="flex flex-col gap-2">
+          <span className="text-[1em] text-gray-500">Samsung Financing Starting from</span>
+          <span className="text-2xl font-bold">{formatPrice((total / 24 - savings / 24).toFixed(2))}/mo   </span>
+          <span className="text-[1em] text-gray-500 line-through text-xl"> {formatPrice((total / 24).toFixed(2))}/mo </span>
+
+          <p>
+            <span className="text-[1em] text-gray-500">For </span>
+            <span className="text-2xl font-bold">24 </span>
+            <span className="text-[1em] text-gray-500">mo† </span>
+          </p>
+        </div>
+        <button className="w-[130px] h-12 rounded-3xl bg-[#408CCE] text-white font-bold cursor-pointer">Add To card</button>
+      </div>
+    </div>
+
+  )
+}
