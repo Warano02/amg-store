@@ -7,8 +7,13 @@ import iPride from "./bg/store-card-40-watch-pride-202505.png"
 import wat from "./bg/store-card-40-watch-s10-202409.jpg"
 import ip1 from "./bg/store-card-40-iphone-16e-202502_GEO_US.jpg"
 import ipa2 from "./bg/store-card-40-ipad-202503.jpg"
-import i16  from "./bg/store-card-40-iphone-16-202409_GEO_US.jpg"
+import i16 from "./bg/store-card-40-iphone-16-202409_GEO_US.jpg"
 import wat2 from "./bg/store-card-40-watch-ultra-202409_GEO_US.jpg"
+//Logo
+import s1s12s from "./logo/us-qled-qn990f-545988375.svg"
+import s1s12s1 from "./logo/us-qled-qn990f-545988380.svg"
+import sjs from "./logo/us-4qn990f-545988401.svg"
+import shhsj from "./logo/us-qled-5545988404.svg"
 //phone
 import samsungSlid1 from "./bg/HOME_GalaxyS25Edge_Main-KV_1440x640_pc.webp"
 import samsungSlid2 from "./bg/SDSAC-9302-DA-Lockup-Memorial-Day-Stars-HP_KV_Full_Bleed_DT-1440x640.webp"
@@ -71,6 +76,13 @@ import samsungTablet1 from "./tablet/a.avif"
 import samsungTablet2 from "./tablet/b.avif"
 import samsungTablet3 from "./tablet/c.webp"
 import samsungTablet4 from "./tablet/d.webp"
+
+//TV
+import neo8k1 from "./tv/us-qled-qn990f-qn75qn990ffxza-545961349.webp"
+import neo8k2 from "./tv/us-qn75qn990ffxza-545961333.webp"
+import neo8k3 from "./tv/400.webp"
+import neo8k4 from "./tv/us-qled-qn990f-qn75qn990ffxza-545985098.webp"
+
 //offers
 import featureOffer from "./offer/CX-ADP-Migration-LNB-1-DT.webp"
 import smartphoneOffer from "./offer/2webp.webp"
@@ -82,12 +94,13 @@ import monitorsOffer from "./offer/7-DT.webp"
 import samsungOffer from "./offer/CX-ADP-Migration-LNB-8-DT.webp"
 import forBu from "./offer/CX-ADP-Migration-LNB-9-DT.webp"
 import bg2sam from "./bg/CX_ADP_YouMake_HeroBanner_DT_1440x540.webp"
+
 export const assets = {
     logo: {
-        logo,
+        logo, s1s12s1, s1s12s, shhsj, sjs
     },
     bg: {
-        samsungSlid1,wat2,i16,sld45,ip1,ipa2, iPride,samsungSlid2, samsungSlid3, bg2sam,s200s1,iap,wat
+        samsungSlid1, wat2, i16, sld45, ip1, ipa2, iPride, samsungSlid2, samsungSlid3, bg2sam, s200s1, iap, wat
     }
 }
 
@@ -235,7 +248,7 @@ export const products = [
             }
         ],
         images: [
-            samsungS25,s25p2, s25p3,s25s2,s25s1, s25p4, s25p5, s25p6
+            samsungS25, s25p2, s25p3, s25s2, s25s1, s25p4, s25p5, s25p6
         ]
     },
     {
@@ -269,7 +282,7 @@ export const products = [
             }
         ],
         images: [
-            samsungFontZ6,sf1, sf2, sf3, sf4
+            samsungFontZ6, sf1, sf2, sf3, sf4
         ]
     },
     {
@@ -303,7 +316,7 @@ export const products = [
             }
         ],
         images: [
-            samsungFoldZ6Flip,sff1, sff2, sff3
+            samsungFoldZ6Flip, sff1, sff2, sff3
         ]
     },
     {
@@ -338,7 +351,7 @@ export const products = [
             }
         ],
         images: [
-            samsungS24Re,s24s2, s24s1, s24s3, s24s4, s24s5
+            samsungS24Re, s24s2, s24s1, s24s3, s24s4, s24s5
         ]
     },
     {
@@ -353,7 +366,29 @@ export const products = [
         inStock: true,
         isNew: true,
         images: [
-            samsungNeoTv1,
+            samsungNeoTv1,neo8k1,neo8k2,neo8k3,neo8k4
+        ],
+        sizes: [
+            {
+                size: '65"',
+                price: 5299.99,
+                normal: 5499.99
+            },
+            {
+                size: '75"',
+                price: 6199.99,
+                normal: 6499.99
+            },
+            {
+                size: '85"',
+                price: 7999.99,
+                normal: 8499.99
+            },
+            {
+                size: '98"',
+                price: 42999.99,
+                normal: null
+            },
         ]
     },
     {
