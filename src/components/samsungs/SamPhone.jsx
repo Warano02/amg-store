@@ -12,7 +12,7 @@ function SamPhone() {
   const [selectedStorageIndex, setSelectedStorageIndex] = useState(0);
   const [selectedColorIndex, setSelectedColorIndex] = useState(0);
   const [storages, setStorage] = useState([])
-  const [phoneName,setPhoneName]=useState("")
+  const [phoneName, setPhoneName] = useState("")
   const [images, setImages] = useState([])
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -80,12 +80,7 @@ function SamPhone() {
             <h1 className="text-xl md:text-2xl font-bold mb-2">Color</h1>
             <div className="flex gap-4">
               {selectedStorage?.colors?.map((color, i) => (
-                <div
-                  key={i}
-                  onClick={() => setSelectedColorIndex(i)}
-                  className={`w-20 h-20 rounded-full cursor-pointer border-2 ${selectedColorIndex === i ? 'border-blue-500' : 'border-gray-300'}`}
-                  style={{ backgroundColor: color.col }}
-                ></div>
+                <ElementData key={i} onClick={() => setSelectedColorIndex(i)} bg={color.col} isSelect={selectedColorIndex === i} />
               ))}
             </div>
           </div>
@@ -96,3 +91,14 @@ function SamPhone() {
 }
 
 export default SamPhone;
+
+export const ElementData = ({ onClick, key, isSelect, bg }) => {
+  return (
+    <div
+      key={key}
+      onClick={onClick}
+      className={`w-20 h-20 rounded-full cursor-pointer border-2 ${isSelect ? 'border-blue-500' : 'border-gray-300'}`}
+      style={{ backgroundColor: bg }}
+    ></div>
+  )
+}
