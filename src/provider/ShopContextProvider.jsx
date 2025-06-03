@@ -1,40 +1,55 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { ShopContext } from "../context/ShopContext";
 
 export const ShopContextProvider = ({ children }) => {
-    const [currency, setCurrency] = useState("$");
+    const [currency, setCurrency] = useState(() => {
+        return localStorage.getItem("currency") || "$";
+    });
+
+    useEffect(() => {
+        localStorage.setItem("currency", currency);
+    }, [currency]);
+
+    // Taux de conversion approximatifs
+    const rates = {
+        "$": 1,
+        "€": 1.17,
+        "XAF": 655.5,
+        "XOF": 577,
+        "₦": 1587.8,
+        "R": 14.8,
+        "KSh": 115,
+        "Br": 55,
+        "₵": 7.2,
+    };
+
+    // Mappage devise → locale + ISO code
+    const currencyData = {
+        "$": { locale: "en-US", code: "USD" },
+        "€": { locale: "fr-FR", code: "EUR" },
+        "XAF": { locale: "fr-CM", code: "XAF" },
+        "XOF": { locale: "fr-SN", code: "XOF" },
+        "₦": { locale: "en-NG", code: "NGN" },
+        "R": { locale: "en-ZA", code: "ZAR" },
+        "KSh": { locale: "en-KE", code: "KES" },
+        "Br": { locale: "am-ET", code: "ETB" },
+        "₵": { locale: "en-GH", code: "GHS" },
+    };
+
     const formatPrice = (price) => {
-        switch (currency) {
-            case "€":
-                // Euro, utilisé dans certains pays africains comme la Côte d'Ivoire, la RDC, etc.
-                return `${(price * 1.17).toFixed(2)} €`;
-            case "XAF":
-                // Franc CFA BEAC (Cameroun, Gabon, etc.)
-                return `${(price * 655.5).toFixed(2)} XAF`;
-            case "XOF":
-                // Franc CFA BCEAO (UEMOA)
-                return `${(price * 577).toFixed(2)} XOF`;
-            case "₦":
-                // Naira nigérian
-                return `₦ ${(price * 1587.80).toFixed(2)}`;
-            case "R":
-                // Rand sud-africain
-                return `R ${(price * 14.8).toFixed(2)}`;
-            case "KSh":
-                // Shilling kényan
-                return `KSh ${(price * 115).toFixed(2)}`;
-            case "Br":
-                // Birr éthiopien
-                return `Br ${(price * 55).toFixed(2)}`;
-            case "₵":
-                // Cedi ghanéen
-                return `₵${(price * 7.2).toFixed(2)}`;
-            default:
-                return `$${price}`;
-        }
+        const rate = rates[currency] || 1;
+        const { locale, code } = currencyData[currency] || { locale: "en-US", code: "USD" };
+        const converted = price * rate;
+
+        return new Intl.NumberFormat(locale, {
+            style: "currency",
+            currency: code,
+            minimumFractionDigits: 2,
+        }).format(converted);
     };
 
     const value = { currency, setCurrency, formatPrice };
+
     return (
         <ShopContext.Provider value={value}>
             {children}
