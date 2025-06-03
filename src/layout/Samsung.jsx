@@ -6,14 +6,15 @@ import "../style/samsung.css"
 function Samsung() {
   const location = useLocation();
   const isHome = location.pathname === "/collection/samsung";
+  const isWatch = location.pathname.includes("/wearable")
   return (
     <>
-      <Navbar />
+      {!isWatch && <Navbar />}
       {isHome && <SamHome />}
-     <div className="mt-21">
-        <Outlet  />
-     </div>
-      <SamFooter />
+      <div className="mt-21">
+        <Outlet />
+      </div>
+      {!isWatch && <SamFooter />}
     </>
   );
 }
