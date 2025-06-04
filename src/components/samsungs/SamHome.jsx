@@ -154,7 +154,7 @@ function SamHome() {
       <H1 text={"Tablets & Computing Offers"} />
       <ProductScroll
         label={"tablet"}
-        scrollable={false}
+        scrollable={true}
         products={products
           .filter((el) => el.marque === "samsung" && el.category === "tablet")
           .map((product) => ({
