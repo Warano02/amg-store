@@ -729,6 +729,90 @@ export const products = [
         images: [samsungBuds5],
     },
     {
+        id: "dd1s5d77",
+        name: "Galaxy Tab S9",
+        marque: "samsung",
+        category: "tablet",
+        desc: "Versatile tablet with immersive display, multi-device connectivity, and powerful performance for everyday use.",
+        logo: "https://image-us.samsung.com/us/tablets/galaxy-tab-s9/products/tab-s9/gallery-images/1.jpg?$product-details-jpg$",
+        price: 139.99,
+        normal: 239.99,
+        inStock: true,
+        isNew: true,
+        size: '13.1"',
+        storages: [
+            {
+                size: "256Go",
+                normal: 1099.99,
+                price: 999.99,
+                colors: [
+                    { col: "#2F4F4F", name: "Dark Slate", price: 999.99 },
+                    { col: "#D3D3D3", name: "Light Gray", price: 949.99 }
+                ]
+            },
+            {
+                size: "512Go",
+                normal: 1299.99,
+                price: 1199.99,
+                colors: [
+                    { col: "#FFD700", name: "Gold", price: 1199.99 },
+                    { col: "#1C1C1C", name: "Carbon Black", price: 1149.99 }
+                ]
+            }
+        ],
+        bands: [],
+        images: [
+            "https://image-us.samsung.com/us/tablets/galaxy-tab-s9/products/tab-s9/gallery-images/1.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/SamsungUS/PIM/new_SDSAC-6164-TabS9_KV-Configurator-800x600_new.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/SamsungUS/home/tablets/galaxy-tab-s9/06282024/SDSAC-7437-Tab-S9-Circle-to-search-Google-Gallery-800x600-v2.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/SamsungUS/home/tablets/galaxy-tab-s9/04262024/SDSAC-7437-Tab-S9-Photo-Assist-Gallery-800x600.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/SamsungUS/home/my-assets/03272024/GalaxyTabS9F_KV_Performance.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/SamsungUS/home/my-assets/03272024/GalaxyTabS9F_KV_Multitasking.jpg?$product-details-jpg$"
+        ]
+    },
+    {
+        id: "dd14d77",
+        name: "Galaxy Tab A9+",
+        marque: "samsung",
+        category: "tablet",
+        desc: "Versatile tablet with immersive display, multi-device connectivity, and powerful performance for everyday use.",
+        logo: "https://image-us.samsung.com/SamsungUS/home/mobile/tablets/12222023/SDSAC-6880-1_Galaxy_Tab_A9_Plus_Graphite_Product_Image_Combo-1600x1200.jpg?$product-details-jpg$",
+        price: 139.99,
+        normal: 239.99,
+        inStock: true,
+        isNew: true,
+        size: '13.1"',
+        storages: [
+            {
+                size: "256Go",
+                normal: 1099.99,
+                price: 999.99,
+                colors: [
+                    { col: "#2F4F4F", name: "Dark Slate", price: 999.99 },
+                    { col: "#D3D3D3", name: "Light Gray", price: 949.99 }
+                ]
+            },
+            {
+                size: "512Go",
+                normal: 1299.99,
+                price: 1199.99,
+                colors: [
+                    { col: "#FFD700", name: "Gold", price: 1199.99 },
+                    { col: "#1C1C1C", name: "Carbon Black", price: 1149.99 }
+                ]
+            }
+        ],
+        bands: [],
+        images: [
+            "https://image-us.samsung.com/SamsungUS/home/mobile/tablets/12222023/SDSAC-6880-1_Galaxy_Tab_A9_Plus_Graphite_Product_Image_Combo-1600x1200.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/SamsungUS/home/tablets/galaxy-tab-a9-plus/Galaxy_Tab_A9_A9+_00_800x600_KV_PC.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/SamsungUS/home/tablets/galaxy-tab-a9-plus/Expansive_and_Bright_Screen_800x600_RGB.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/SamsungUS/home/tablets/galaxy-tab-a9-plus/Performance_and_Storage_copy_800x600_RGB.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/SamsungUS/home/tablets/galaxy-tab-a9-plus/Multi-Active_Windows_RGB_800x600_update.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/SamsungUS/home/tablets/galaxy-tab-a9-plus/Samsung_Kids_copy_800x600_RGB.jpg?$product-details-jpg$"
+        ]
+    },
+    {
         id: "dd14d77",
         name: "Galaxy Tab S10 FE+ | FE",
         marque: "samsung",
@@ -739,6 +823,7 @@ export const products = [
         normal: 239.99,
         inStock: true,
         isNew: true,
+        size: '13.1"',
         storages: [
             {
                 size: "256Go",
@@ -746,7 +831,7 @@ export const products = [
                 price: 999.99,
                 colors: [
                     { col: "#2F4F4F", name: "Dark Slate", price: 999.99 },
-                    { col: "#D3D3D3", name: "Light Gray", price: 949.99 },
+                    { col: "#D3D3D3", name: "Light Gray", price: 949.99 }
                 ]
             },
             {
@@ -755,11 +840,10 @@ export const products = [
                 price: 1199.99,
                 colors: [
                     { col: "#FFD700", name: "Gold", price: 1199.99 },
-                    { col: "#1C1C1C", name: "Carbon Black", price: 1149.99 },
+                    { col: "#1C1C1C", name: "Carbon Black", price: 1149.99 }
                 ]
             }
         ],
-        colors: [], // no flat colors array since it's nested under `storages`
         bands: [],
         images: [
             samsungTablet1,
@@ -782,17 +866,28 @@ export const products = [
         normal: 999.99,
         inStock: true,
         isNew: true,
-        storages: [],
-        colors: [
+        size: '14.6"',
+        storages: [
             {
-                name: "Moonstone Gray",
-                color: "#808080",
-                image: samsungTablet2,
-                price: 799.99
+                size: "512Go",
+                normal: 999.99,
+                price: 799.99,
+                colors: [
+                    {
+                        name: "Moonstone Gray",
+                        col: "#808080",
+                        price: 799.99
+                    }
+                ]
             }
         ],
         bands: [],
-        images: [samsungTablet2]
+        images: [
+            samsungTablet2, "https://image-us.samsung.com/SamsungUS/home/tablets/galaxy-tab-s10/09252024/SDSAC-8163-8_Durability_TabS10_series-800x600.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/SamsungUS/home/tablets/galaxy-tab-s10/09302024/SDSAC-8200-9_Performance_TabS10_plus-Disc-800x6001.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/SamsungUS/home/tablets/galaxy-tab-s10/new/11_Eco_Key_TabS10_plus-800x600.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/SamsungUS/home/my-assets/09192024/1_Tab_S10_Plus_Moonstone_Blue_Combo_Gallery-1600x1200.jpg?$product-details-jpg$"
+        ]
     },
     {
         id: "dd14d79",
@@ -805,13 +900,19 @@ export const products = [
         normal: 1899.99,
         inStock: true,
         isNew: true,
-        storages: [],
-        colors: [
+        size: '15.6"',
+        storages: [
             {
-                name: "Silver",
-                color: "#C0C0C0",
-                image: samsungTablet3,
-                price: 1399.99
+                size: "1To",
+                normal: 1899.99,
+                price: 1399.99,
+                colors: [
+                    {
+                        name: "Silver",
+                        col: "#C0C0C0",
+                        price: 1399.99
+                    }
+                ]
             }
         ],
         bands: [],
@@ -828,13 +929,19 @@ export const products = [
         normal: 1979.99,
         inStock: true,
         isNew: true,
-        storages: [],
-        colors: [
+        size: '15.6"',
+        storages: [
             {
-                name: "Graphite",
-                color: "#3A3A3C",
-                image: samsungTablet4,
-                price: 1479.99
+                size: "1To",
+                normal: 1979.99,
+                price: 1479.99,
+                colors: [
+                    {
+                        name: "Graphite",
+                        col: "#3A3A3C",
+                        price: 1479.99
+                    }
+                ]
             }
         ],
         bands: [],
