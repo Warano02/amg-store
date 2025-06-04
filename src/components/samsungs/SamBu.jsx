@@ -127,7 +127,7 @@ const TabNavigation = ({ active, setActive }) => {
           <button
             key={tab}
             onClick={() => setActive(tab)}
-            className="relative pb-1"
+            className="relative pb-1 cursor-pointer transition duration-200 hover:text-black"
           >
             <span className={active === tab ? "text-black" : "text-gray-600"}>
               {tab}

@@ -597,14 +597,13 @@ export const products = [
         ]
     },
     {
-        id: "dd14d73-w7",
+        id: "dd14d73",
         name: "Galaxy Watch7",
         marque: "samsung",
         category: "wearable",
         desc: "Advanced smartwatch with AMOLED display, health tracking, and customizable styles.",
         size: "44mm",
-        logo:
-            "https://image-us.samsung.com/us/galaxy-watch7/designstudio/SM-L705UDA_ET-SNL70MO.jpg?$product-details-jpg$",
+        logo: "https://image-us.samsung.com/us/galaxy-watch7/designstudio/SM-L705UDA_ET-SNL70MO.jpg?$product-details-jpg$",
         price: 299.99,
         normal: 474.99,
         inStock: true,
@@ -613,15 +612,13 @@ export const products = [
             {
                 name: "black",
                 color: "#000000",
-                image:
-                    "https://image-us.samsung.com/us/galaxy-watch7/designstudio/SM-L705UDA_ET-SNL70MO.jpg?$product-details-jpg$",
+                image: "https://image-us.samsung.com/us/galaxy-watch7/designstudio/SM-L705UDA_ET-SNL70MO.jpg?$product-details-jpg$",
                 price: 299.99,
             },
             {
                 name: "silver",
                 color: "#d1d5db",
-                image:
-                    "https://image-us.samsung.com/us/galaxy-watch7/designstudio/SM-L705UZW_ET-SNL70MB.jpg?$product-details-jpg$",
+                image: "https://image-us.samsung.com/us/galaxy-watch7/designstudio/SM-L705UZW_ET-SNL70MB.jpg?$product-details-jpg$",
                 price: 309.99,
             },
         ],
@@ -630,86 +627,69 @@ export const products = [
             { name: "Sport Band", color: "black" },
             { name: "Metal Link", color: "silver" },
         ],
+        images: [
+            "https://image-us.samsung.com/us/galaxy-watch7/designstudio/SM-L705UDA_ET-SNL70MO.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/us/galaxy-watch7/designstudio/SM-L705UZW_ET-SNL70MB.jpg?$product-details-jpg$"
+        ],
     },
-
     {
-        id: "dd14d73-buds2",
-        name: "Galaxy Buds2",
+        id: "dd14d73-b",
+        name: "Galaxy Watch7",
         marque: "samsung",
-        category: "buds",
-        desc: "Wireless earbuds with active noise cancellation and rich sound quality.",
-        size: null,
-        logo:
-            "https://image-us.samsung.com/us/mobile/audio/galaxy-buds2/buds2_product_image.png",
-        price: 149.99,
-        normal: 199.99,
+        category: "wearable",
+        desc: "Smartwatch with modern design, fitness tracking, and seamless connectivity.",
+        size: "44mm",
+        logo: samsungBuds2,
+        price: 299.99,
+        normal: 474.99,
         inStock: true,
         isNew: true,
         colors: [
             {
                 name: "black",
                 color: "#000000",
-                image:
-                    "https://image-us.samsung.com/us/mobile/audio/galaxy-buds2/buds2_black.png",
-                price: 149.99,
-            },
-            {
-                name: "white",
-                color: "#ffffff",
-                image:
-                    "https://image-us.samsung.com/us/mobile/audio/galaxy-buds2/buds2_white.png",
-                price: 149.99,
-            },
+                image: samsungBuds2,
+                price: 299.99,
+            }
         ],
-        bands: [],
-        images: [
-            "https://image-us.samsung.com/us/mobile/audio/galaxy-buds2/buds2_product_image.png",
+        bands: [
+            { name: "Peakform", color: "white sand" },
+            { name: "Sport Band", color: "black" },
+            { name: "Metal Link", color: "silver" },
         ],
+        images: [samsungBuds2],
     },
     {
-        id: "dd14d74-buds3pro",
+        id: "dd14d74",
         name: "Galaxy Buds3 Pro",
         marque: "samsung",
         category: "buds",
-        desc: "Premium earbuds with immersive sound and advanced noise reduction.",
+        desc: "Premium earbuds with immersive sound and advanced noise cancellation.",
         size: null,
-        logo:
-            "https://image-us.samsung.com/us/mobile/audio/galaxy-buds3-pro/buds3pro_product_image.png",
+        logo: samsungBuds3,
         price: 299.99,
         normal: 424.99,
         inStock: true,
         isNew: true,
         colors: [
             {
-                name: "phantom black",
-                color: "#1c1c1c",
-                image:
-                    "https://image-us.samsung.com/us/mobile/audio/galaxy-buds3-pro/black.png",
+                name: "black",
+                color: "#000000",
+                image: samsungBuds3,
                 price: 299.99,
-            },
-            {
-                name: "silver",
-                color: "#d1d5db",
-                image:
-                    "https://image-us.samsung.com/us/mobile/audio/galaxy-buds3-pro/silver.png",
-                price: 299.99,
-            },
+            }
         ],
         bands: [],
-        images: [
-            "https://image-us.samsung.com/us/mobile/audio/galaxy-buds3-pro/buds3pro_product_image.png",
-        ],
+        images: [samsungBuds3],
     },
-
     {
-        id: "dd14d75-ring",
+        id: "dd14d75",
         name: "Galaxy Ring",
         marque: "samsung",
         category: "buds",
-        desc: "Smart connected ring with notifications and health tracking on your finger.",
+        desc: "Smart ring for tracking your health, sleep, and notifications.",
         size: null,
-        logo:
-            "https://image-us.samsung.com/us/mobile/audio/galaxy-ring/ring_product_image.png",
+        logo: samsungBuds4,
         price: 399.99,
         normal: 549.99,
         inStock: true,
@@ -718,26 +698,21 @@ export const products = [
             {
                 name: "black",
                 color: "#000000",
-                image:
-                    "https://image-us.samsung.com/us/mobile/audio/galaxy-ring/black.png",
+                image: samsungBuds4,
                 price: 399.99,
-            },
+            }
         ],
         bands: [],
-        images: [
-            "https://image-us.samsung.com/us/mobile/audio/galaxy-ring/ring_product_image.png",
-        ],
+        images: [samsungBuds4],
     },
-
     {
-        id: "dd14d76-buds3",
+        id: "dd14d76",
         name: "Galaxy Buds3",
         marque: "samsung",
         category: "buds",
-        desc: "Compact earbuds with clear sound and fast connectivity.",
+        desc: "Compact earbuds with clear sound and seamless Galaxy ecosystem integration.",
         size: null,
-        logo:
-            "https://image-us.samsung.com/us/mobile/audio/galaxy-buds3/buds3_product_image.png",
+        logo: samsungBuds5,
         price: 139.99,
         normal: 239.99,
         inStock: true,
@@ -746,22 +721,12 @@ export const products = [
             {
                 name: "white",
                 color: "#ffffff",
-                image:
-                    "https://image-us.samsung.com/us/mobile/audio/galaxy-buds3/white.png",
+                image: samsungBuds5,
                 price: 139.99,
-            },
-            {
-                name: "black",
-                color: "#000000",
-                image:
-                    "https://image-us.samsung.com/us/mobile/audio/galaxy-buds3/black.png",
-                price: 139.99,
-            },
+            }
         ],
         bands: [],
-        images: [
-            "https://image-us.samsung.com/us/mobile/audio/galaxy-buds3/buds3_product_image.png",
-        ],
+        images: [samsungBuds5],
     },
     {
         id: "dd14d77",
