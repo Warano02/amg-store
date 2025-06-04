@@ -730,62 +730,114 @@ export const products = [
     },
     {
         id: "dd14d77",
-        name: 'Galaxy Tab S10 FE+ | FE',
+        name: "Galaxy Tab S10 FE+ | FE",
         marque: "samsung",
         category: "tablet",
-        desc: "",
+        desc: "Versatile tablet with immersive display, multi-device connectivity, and powerful performance for everyday use.",
         logo: samsungTablet1,
         price: 139.99,
         normal: 239.99,
         inStock: true,
         isNew: true,
+        storages: [
+            {
+                size: "256Go",
+                normal: 1099.99,
+                price: 999.99,
+                colors: [
+                    { col: "#2F4F4F", name: "Dark Slate", price: 999.99 },
+                    { col: "#D3D3D3", name: "Light Gray", price: 949.99 },
+                ]
+            },
+            {
+                size: "512Go",
+                normal: 1299.99,
+                price: 1199.99,
+                colors: [
+                    { col: "#FFD700", name: "Gold", price: 1199.99 },
+                    { col: "#1C1C1C", name: "Carbon Black", price: 1149.99 },
+                ]
+            }
+        ],
+        colors: [], // no flat colors array since it's nested under `storages`
+        bands: [],
         images: [
             samsungTablet1,
+            "https://image-us.samsung.com/SamsungUS/home/tablets/galaxy-tab-s10/09252024/Galaxy-Tab-S10-Ultra_Single-KV_2P_Moonstone-Gray_RGB_revised-800x600.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/SamsungUS/home/tablets/galaxy-tab-s10/new/5_AI_Key_TabS10_ultra-800x600.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/SamsungUS/home/tablets/galaxy-tab-s10/09252024/SDSAC-8282-Tab_S10_Ultra_Gallery-800x600.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/SamsungUS/home/tablets/galaxy-tab-s10/09252024/SDSAC-8163-7_Display_Size_14-6_TabS10_plus_800x600-800x600.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/SamsungUS/home/tablets/galaxy-tab-s10/09302024/SDSAC-8200-9_Performance_TabS10_ultra-Disc-800x6001.jpg?$product-details-jpg$",
+            "https://image-us.samsung.com/SamsungUS/home/tablets/galaxy-tab-s10/09252024/SDSAC-8163-Moonstone-Gray-S-Pen-800x600-1.jpg?$product-details-jpg$"
         ]
     },
     {
         id: "dd14d78",
-        name: 'Galaxy Tab S10 Ultra',
+        name: "Galaxy Tab S10 Ultra",
         marque: "samsung",
         category: "tablet",
-        desc: "",
+        desc: "High-performance tablet with a large AMOLED display, S Pen support, and desktop-like productivity.",
         logo: samsungTablet2,
         price: 799.99,
         normal: 999.99,
         inStock: true,
         isNew: true,
-        images: [
-            samsungTablet2,
-        ]
+        storages: [],
+        colors: [
+            {
+                name: "Moonstone Gray",
+                color: "#808080",
+                image: samsungTablet2,
+                price: 799.99
+            }
+        ],
+        bands: [],
+        images: [samsungTablet2]
     },
     {
         id: "dd14d79",
-        name: 'Galaxy Book 5 Pro',
+        name: "Galaxy Book 5 Pro",
         marque: "samsung",
         category: "tablet",
-        desc: "",
+        desc: "Powerful and lightweight laptop with vivid AMOLED screen and next-gen performance for professionals.",
         logo: samsungTablet3,
         price: 1399.99,
         normal: 1899.99,
         inStock: true,
         isNew: true,
-        images: [
-            samsungTablet3,
-        ]
+        storages: [],
+        colors: [
+            {
+                name: "Silver",
+                color: "#C0C0C0",
+                image: samsungTablet3,
+                price: 1399.99
+            }
+        ],
+        bands: [],
+        images: [samsungTablet3]
     },
     {
         id: "dd14d80",
-        name: 'Galaxy Book5 Pro 360',
+        name: "Galaxy Book5 Pro 360",
         marque: "samsung",
         category: "tablet",
-        desc: "",
+        desc: "2-in-1 convertible laptop with touch display, full pen support, and long battery life.",
         logo: samsungTablet4,
         price: 1479.99,
         normal: 1979.99,
         inStock: true,
         isNew: true,
-        images: [
-            samsungTablet4,
-        ]
-    },
+        storages: [],
+        colors: [
+            {
+                name: "Graphite",
+                color: "#3A3A3C",
+                image: samsungTablet4,
+                price: 1479.99
+            }
+        ],
+        bands: [],
+        images: [samsungTablet4]
+    }
 ]
