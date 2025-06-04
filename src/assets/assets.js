@@ -597,19 +597,39 @@ export const products = [
         ]
     },
     {
-        id: "dd14d72",
-        name: 'Galaxy Watch Ultra',
+        id: "dd14d73",
+        name: "Galaxy Watch7",
         marque: "samsung",
         category: "wearable",
         desc: "",
-        logo: samsungBuds1,
-        price: 509.99,
-        normal: 834.99,
+        size: "44mm",
+        logo:
+            "https://image-us.samsung.com/us/galaxy-watch7/designstudio/SM-L705UDA_ET-SNL70MO.jpg?$product-details-jpg$",
+        price: 299.99,
+        normal: 474.99,
         inStock: true,
         isNew: true,
-        images: [
-            samsungBuds1,
-        ]
+        colors: [
+            {
+                name: "black",
+                color: "#000000",
+                image:
+                    "https://image-us.samsung.com/us/galaxy-watch7/designstudio/SM-L705UDA_ET-SNL70MO.jpg?$product-details-jpg$",
+                price: 299.99,
+            },
+            {
+                name: "silver",
+                color: "#d1d5db",
+                image:
+                    "https://image-us.samsung.com/us/galaxy-watch7/designstudio/SM-L705UZW_ET-SNL70MB.jpg?$product-details-jpg$",
+                price: 309.99,
+            },
+        ],
+        bands: [
+            { name: "Peakform", color: "white sand" },
+            { name: "Sport Band", color: "black" },
+            { name: "Metal Link", color: "silver" },
+        ],
     },
     {
         id: "dd14d73",
