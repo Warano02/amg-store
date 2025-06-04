@@ -41,6 +41,7 @@ function SamBu() {
   if (isLoading || !product || !selectedColor || !selectedBand) return <p>Loading...</p>;
   if (error) return <p>Error loading product.</p>;
 
+  // PRODUCT
   return (
     <div>
       <Title />
