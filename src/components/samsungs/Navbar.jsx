@@ -7,7 +7,7 @@ import CurrencySelector from './Currency';
 const Navbar = () => {
     const { user, cardItem } = useAppContext()
     const navLinks = [
-        { name: 'Home', path: '/' },
+        { name: 'Home', path: '/collection/samsung/' },
         { name: 'Products', path: '/collection/samsung/product/' },
         { name: 'Contact', path: '/' },
         { name: 'About', path: '/' },
