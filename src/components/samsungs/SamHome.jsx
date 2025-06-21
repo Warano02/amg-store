@@ -4,6 +4,8 @@ import { assets, offers, products } from "../../assets/assets";
 import { Link } from "react-router-dom";
 import "/src/style/samsung.css";
 import { useShopContext } from "../../hooks/useShopContext";
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap/all";
 
 const H1 = ({ text }) => {
   return (
@@ -172,11 +174,18 @@ function SamHome() {
 }
 
 export function Elem({ id, label, name, subtitle, index, logo }) {
+  useGSAP(()=>{
+    gsap.fromTo(
+      `.link`,
+      { opacity: 0, y: -20,x:-45 },
+      { opacity: 1,x:0, duration: 2, }
+    );
+  })
   return (
     <Link
       to={`/collection/samsung/${label}/${id}`}
       key={index}
-      className="min-w-[20em] max-w-[22em] bg-white p-4 rounded-lg shadow hover:scale-105 transition-transform duration-300"
+      className="link min-w-[20em] max-w-[22em] bg-white p-4 rounded-lg shadow hover:scale-105 transition-transform duration-300"
       style={{ boxShadow: "0 4px 12px #F5F5F5" }}
     >
       <img
