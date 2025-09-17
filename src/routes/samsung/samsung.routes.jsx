@@ -1,14 +1,19 @@
 import SamBu from "../../components/samsungs/SamBu";
+import SamHome from "../../components/samsungs/SamHome";
 import SamPhone from "../../components/samsungs/SamPhone";
 import SamProduct from "../../components/samsungs/SamProduct";
 import SamTab from "../../components/samsungs/SamTab";
 import SamTv from "../../components/samsungs/SamTv";
 import Samsung from "../../layout/Samsung";
 
-export const samsungRoutes =[ {
+export const samsungRoutes = [{
     path: "samsung",
     element: <Samsung />,
     children: [
+        {
+            element: <SamHome />,
+            index: true
+        },
         {
             path: "phone/:id",
             element: <SamPhone />,
