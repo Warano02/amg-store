@@ -6,3 +6,12 @@
 .special-scroll::-webkit-scrollbar-track {
     display: none;
 }
+
+.hide-scrollbar {
+  scrollbar-width: none; 
+  -ms-overflow-style: none; 
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
