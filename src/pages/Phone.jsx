@@ -6,7 +6,7 @@ import { ImageSlider } from "@/components/ImageGallery";
 import Title from "@/components/°";
 import { products } from "@/assets/assets";
 
-function SamPhone() {
+function Phone() {
   const { formatPrice } = useShopContext()
   const { id } = useParams()
   const [selectedStorageIndex, setSelectedStorageIndex] = useState(0);
@@ -90,7 +90,7 @@ function SamPhone() {
   )
 }
 
-export default SamPhone;
+export default Phone;
 
 export const ElementData = ({ onClick, key, isSelect, bg }) => {
   return (

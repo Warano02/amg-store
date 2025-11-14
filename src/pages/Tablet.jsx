@@ -4,9 +4,9 @@ import { TitleTablet } from "@/components/°";
 import { products } from "@/assets/assets";
 import { useParams } from "react-router-dom";
 import { useShopContext } from "@/hooks/useShopContext";
-import { ElementData } from "./SamPhone";
+import { ElementData } from "./Phone";
 
-function SamTab() {
+function Tablet() {
   const { formatPrice } = useShopContext();
   const { id } = useParams();
   const [selectedStorageIndex, setSelectedStorageIndex] = useState(0);
@@ -103,4 +103,4 @@ function SamTab() {
   );
 }
 
-export default SamTab;
+export default Tablet;
