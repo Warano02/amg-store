@@ -134,7 +134,7 @@ const TabNavigation = ({ active, setActive }) => {
               {tab}
             </span>
             {active === tab && (
-              <div className="absolute -bottom-[2px] left-0 right-0 h-[3px] bg-black rounded-full" />
+              <div className="absolute -bottom-0.5 left-0 right-0 h-[3px] bg-black rounded-full" />
             )}
           </button>
         ))}

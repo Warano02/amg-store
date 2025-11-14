@@ -73,24 +73,24 @@ function SamProduct() {
       <div className="flex flex-wrap justify-center gap-6">
         {filteredItems.map((item, i) => (
           <Link
-            to={`/collection/samsung/${item.category}/${item.id}`}
+            to={`/${item.category}/${item.id}`}
             key={item.id || i}
             className="bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all duration-300 w-[280px] p-4 flex flex-col items-center"
           >
-            <div className="w-52 h-64 [perspective:1000px] mb-4 relative group">
-              <div className="relative w-full h-full transition-transform duration-500 [transform-style:preserve-3d] group-hover:[transform:rotateY(180deg)]">
-                <div className="absolute w-full h-full [backface-visibility:hidden] flex items-center justify-center bg-white rounded-md">
+            <div className="w-52 h-64 perspective-[1000px] mb-4 relative group">
+              <div className="relative w-full h-full transition-transform duration-500 transform-style-3d group-hover:transform-[rotateY(180deg)]">
+                <div className="absolute w-full h-full backface-hidden flex items-center justify-center bg-white rounded-md">
                   <img
                     src={item.logo}
                     alt={item.name}
-                    className="max-w-[160px] transition-transform duration-300 group-hover:scale-105"
+                    className="max-w-40 transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-                <div className="absolute w-full h-full [backface-visibility:hidden] [transform:rotateY(180deg)] flex items-center justify-center bg-white rounded-md">
+                <div className="absolute w-full h-full backface-hidden transform-[rotateY(180deg)] flex items-center justify-center bg-white rounded-md">
                   <img
                     src={item.images?.[1] ?? item.logo}
                     alt={`${item.name} alternate`}
-                    className="max-w-[160px] transition-transform duration-300 group-hover:scale-105"
+                    className="max-w-40 transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
               </div>

@@ -83,7 +83,7 @@ function SamTab() {
                     {ele.normal && <span className="text-gray-500 font-semibold line-through"> {formatPrice(ele.normal)} </span>}
                     <h2 className="font-bold">{formatPrice(ele.price)} </h2>
                   </div>
-                  {ele.normal && <span className="text-orange-500 font-[400]">Save -{formatPrice(ele.normal - ele.price)} </span>}
+                  {ele.normal && <span className="text-orange-500 font-normal">Save -{formatPrice(ele.normal - ele.price)} </span>}
                 </div>
               </div>
             ))}

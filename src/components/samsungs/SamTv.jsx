@@ -73,7 +73,7 @@ function SamTv() {
                                 <div
                                     key={i}
                                     onClick={() => setSelectedSize(e)}
-                                    className={`w-[240px] h-30 rounded-2xl border p-2 flex items-center justify-center flex-col cursor-pointer transition-all
+                                    className={`w-60 h-30 rounded-2xl border p-2 flex items-center justify-center flex-col cursor-pointer transition-all
                                         ${isActive ? "border-blue-600 bg-blue-50" : "border-gray-300 hover:border-gray-500"}`}
                                 >
                                     <h1 className="text-xl md:text-2xl font-bold">{e.size}</h1>

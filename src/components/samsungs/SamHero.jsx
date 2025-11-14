@@ -83,7 +83,7 @@ function Slider() {
                     style={{ transform: `translateX(-${currentSlide * 100}%)` }}
                 >
                     {slides.map((slide, index) => (
-                        <div key={index} className="w-full flex-shrink-0 h-full relative">
+                        <div key={index} className="w-full shrink-0 h-full relative">
                             <img
                                 src={slide.back}
                                 alt={`Slide ${index}`}
