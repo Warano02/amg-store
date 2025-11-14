@@ -3,7 +3,7 @@ import NotFound from "../pages/NotFound";
 import SamBu from "../components/samsungs/SamBu";
 import Home from "@/pages/Home";
 import Phone from "@/pages/Phone";
-import SamProduct from "../components/samsungs/SamProduct";
+import Product from "@/pages/Product";
 import Tablet from "@/pages/Tablet";
 import TV from "@/pages/TV";
 import Layout from "../layout";
@@ -39,7 +39,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "product",
-                element: <SamProduct />,
+                element: <Product />,
             },
         ],
     },

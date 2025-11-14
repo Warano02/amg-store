@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { products } from "../../assets/assets";
-import { useShopContext } from "../../hooks/useShopContext";
+import { products } from "@/assets/assets";
+import { useShopContext } from "@/hooks/useShopContext";
 import { Link } from "react-router-dom";
 
-function SamProduct() {
+function Product() {
   const { formatPrice } = useShopContext();
 
   const allTerms = [
@@ -118,4 +118,4 @@ function SamProduct() {
   );
 }
 
-export default SamProduct;
+export default Product;
