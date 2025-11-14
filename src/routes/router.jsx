@@ -5,13 +5,13 @@ import SamHome from "../components/samsungs/SamHome";
 import SamPhone from "../components/samsungs/SamPhone";
 import SamProduct from "../components/samsungs/SamProduct";
 import SamTab from "../components/samsungs/SamTab";
-import SamTv from "../components/samsungs/SamTv";
-import Samsung from "../layout/Samsung";
+import TV from "@/pages/TV";
+import Layout from "../layout";
 
 export const router = createBrowserRouter([
     {
         path: "/",
-        element: <Samsung />,
+        element: <Layout />,
         children: [
             {
                 element: <SamHome />,
@@ -35,7 +35,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: "tv/:id",
-                element: <SamTv />,
+                element: <TV />,
             },
             {
                 path: "product",

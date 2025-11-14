@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import { useShopContext } from "../../hooks/useShopContext";
+import { useShopContext } from "@/hooks/useShopContext";
 import { useParams } from "react-router-dom";
-import { products } from "../../assets/assets";
+import { products } from "@/assets/assets";
 
 function SamBu() {
   const { id } = useParams();

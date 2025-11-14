@@ -1,4 +1,4 @@
-import { useShopContext } from "../../hooks/useShopContext"
+import { useShopContext } from "@/hooks/useShopContext"
 
 const SVG = () => (
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 150 30" className="w-26 h-4">
@@ -76,7 +76,7 @@ export function Title3({ total, savings, name }) {
         </div>
       </div>
       <div className="flex justify-around gap-14 items-center h-full relative">
-        <div className="flex flex-col gap-2 border-r-1 pr-2">
+        <div className="flex flex-col gap-2 border-r pr-2">
           <span className="text-[1em] text-gray-500">Total</span>
           <span className="text-2xl font-bold">{formatPrice(total.toFixed(2))}</span>
           <div className="flex gap-2">

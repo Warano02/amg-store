@@ -1,10 +1,10 @@
 import { useParams } from "react-router-dom"
 import { useEffect, useState } from 'react';
 
-import { useShopContext } from "../../hooks/useShopContext";
-import { ImageSlider } from "./X022";
-import Title from "./°";
-import { products } from "../../assets/assets";
+import { useShopContext } from "@/hooks/useShopContext";
+import { ImageSlider } from "@/components/ImageGallery";
+import Title from "@/components/°";
+import { products } from "@/assets/assets";
 
 function SamPhone() {
   const { formatPrice } = useShopContext()

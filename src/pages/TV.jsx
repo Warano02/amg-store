@@ -1,8 +1,8 @@
 import { useParams } from "react-router-dom"
-import { assets, products } from "../../assets/assets"
-import { useShopContext } from "../../hooks/useShopContext"
-import { ImageGallery } from "./X022"
-import { Title3 } from "./°"
+import { assets, products } from "@/assets/assets"
+import { useShopContext } from "@/hooks/useShopContext"
+import { ImageGallery } from "@/components/ImageGallery"
+import { Title3 } from "@/components/°"
 import { useEffect, useState } from "react"
 
 function SamTv() {

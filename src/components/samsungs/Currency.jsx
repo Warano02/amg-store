@@ -1,4 +1,4 @@
-import { useShopContext } from "../../hooks/useShopContext";
+import { useShopContext } from "@/hooks/useShopContext";
 
 function CurrencySelector() {
   const { currency, setCurrency } = useShopContext();

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
-import { useAppContext } from "../../hooks/useAppContext";
-import { assets } from "../../assets/assets";
+import { useAppContext } from "@/hooks/useAppContext";
+import { assets } from "@/assets/assets";
 
 function SamFooter() {
     const {compagny}=useAppContext()

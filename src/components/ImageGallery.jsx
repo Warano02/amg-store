@@ -46,7 +46,7 @@ export function ImageSlider({images}) {
                             key={index}
                             src={src}
                             alt={`Slide ${index + 1}`}
-                            className="w-full flex-shrink-0"
+                            className="w-full shrink-0"
                         />
                     ))}
                 </div>

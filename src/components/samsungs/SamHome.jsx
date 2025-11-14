@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import Slider from "./SamHero";
-import { assets, offers, products } from "../../assets/assets";
+import { assets, offers, products } from "@/assets/assets";
 import { Link } from "react-router-dom";
 import "/src/style/samsung.css";
-import { useShopContext } from "../../hooks/useShopContext";
+import { useShopContext } from "@/hooks/useShopContext";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
 

@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react";
-import { ImageSlider } from "./X022";
-import { TitleTablet } from "./°";
-import { products } from "../../assets/assets";
+import { ImageSlider } from "@/components/ImageGallery";
+import { TitleTablet } from "@/components/°";
+import { products } from "@/assets/assets";
 import { useParams } from "react-router-dom";
-import { useShopContext } from "../../hooks/useShopContext";
+import { useShopContext } from "@/hooks/useShopContext";
 import { ElementData } from "./SamPhone";
 
 function SamTab() {
