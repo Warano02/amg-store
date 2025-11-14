@@ -1,7 +1,7 @@
 import { createBrowserRouter } from "react-router-dom";
 import NotFound from "../pages/NotFound";
 import SamBu from "../components/samsungs/SamBu";
-import SamHome from "../components/samsungs/SamHome";
+import Home from "@/pages/Home";
 import SamPhone from "../components/samsungs/SamPhone";
 import SamProduct from "../components/samsungs/SamProduct";
 import SamTab from "../components/samsungs/SamTab";
@@ -14,7 +14,7 @@ export const router = createBrowserRouter([
         element: <Layout />,
         children: [
             {
-                element: <SamHome />,
+                element: <Home />,
                 index: true
             },
             {

@@ -1,8 +1,7 @@
 import { useEffect, useRef, useState } from "react";
-import Slider from "./SamHero";
+import Slider from "@/components/Hero";
 import { assets, offers, products } from "@/assets/assets";
 import { Link } from "react-router-dom";
-import "/src/style/samsung.css";
 import { useShopContext } from "@/hooks/useShopContext";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap/all";
@@ -15,7 +14,7 @@ const H1 = ({ text }) => {
   );
 };
 
-function SamHome() {
+function Home() {
   const scrollRef = useRef(null);
   const { formatPrice } = useShopContext();
   return (
@@ -336,4 +335,4 @@ const Marque = ({ cardData }) => {
   );
 };
 
-export default SamHome;
+export default Home;

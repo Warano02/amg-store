@@ -1,22 +1,21 @@
 import { Outlet, useLocation } from "react-router-dom";
-import Navbar from "../components/samsungs/Navbar";
-import SamHome from "../components/samsungs/SamHome";
-import SamFooter from "../components/samsungs/SamFooter";
-import "../style/samsung.css"
-function Samsung() {
+import Navbar from "@/components/Navbar";
+import Home from "@/pages/Home";
+import Footer from "@/components/Footer";
+function Layout() {
   const location = useLocation();
-  const isHome = location.pathname === "/collection/samsung";
+  const isHome = location.pathname === "/";
   const isWatch = location.pathname.includes("/wearable")
   return (
     <>
       {!isWatch && <Navbar />}
-      {isHome && <SamHome />}
+      {isHome && <Home />}
       <div className="mt-21">
         <Outlet />
       </div>
-      {!isWatch && <SamFooter />}
+      {!isWatch && <Footer />}
     </>
   );
 }
 
-export default Samsung;
+export default Layout;

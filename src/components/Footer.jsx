@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { useAppContext } from "@/hooks/useAppContext";
 import { assets } from "@/assets/assets";
 
-function SamFooter() {
+function Footer() {
     const {compagny}=useAppContext()
   return (
     <footer className="px-6 mt-10 md:px-16 border-t-2 lg:px-24 xl:px-32 pt-8 w-full text-gray-500">
@@ -54,4 +54,4 @@ function SamFooter() {
   );
 }
 
-export default SamFooter;
+export default Footer;
