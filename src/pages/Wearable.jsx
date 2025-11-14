@@ -3,7 +3,7 @@ import { useShopContext } from "@/hooks/useShopContext";
 import { useParams } from "react-router-dom";
 import { products } from "@/assets/assets";
 
-function SamBu() {
+function Wearable() {
   const { id } = useParams();
   const [product, setProduct] = useState(null);
   const [selectedColor, setSelectedColor] = useState(null);
@@ -214,4 +214,4 @@ const TabContent = ({
   }
 };
 
-export default SamBu;
+export default Wearable;

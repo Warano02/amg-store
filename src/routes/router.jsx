@@ -1,6 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
-import NotFound from "../pages/NotFound";
-import SamBu from "../components/samsungs/SamBu";
+import NotFound from "@/pages/NotFound";
+import Wearable from "@/pages/Wearable";
 import Home from "@/pages/Home";
 import Phone from "@/pages/Phone";
 import Product from "@/pages/Product";
@@ -23,11 +23,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: "wearable/:id",
-                element: <SamBu />,
+                element: <Wearable />,
             },
             {
                 path: "audio/:id",
-                element: <SamBu />,
+                element: <Wearable />,
             },
             {
                 path: "tablet/:id",
